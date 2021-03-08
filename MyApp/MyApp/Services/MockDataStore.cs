@@ -52,7 +52,7 @@ namespace MyApp.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<List<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
         }
