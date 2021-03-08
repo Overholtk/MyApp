@@ -26,7 +26,6 @@ namespace MyApp.Services
             try
             {
                 int addedItem = await database.InsertAsync(item);
-                Console.WriteLine("I have been activated");
                 return true;
             }
             catch(Exception e)
@@ -36,12 +35,12 @@ namespace MyApp.Services
             }
         }
 
-        public Task<bool> DeleteItemAsync(string id)
+        public Task<bool> DeleteItemAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Item> GetItemAsync(string id)
+        public Task<Item> GetItemAsync(int id)
         {
             return database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
