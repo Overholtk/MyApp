@@ -30,9 +30,15 @@
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="So you think you can write better fortunes than us?" FontSize="Title"/>
-                <Label Text="Enter your idea below:" FontSize="16"  Padding="0,0,0,0"/>
-                <StackLayout Orientation="Horizontal" Margin="145, 20, 0, 20">
-                    <Entry Placeholder="Name" BackgroundColor="{StaticResource Accent}" Text="{Binding Text}" Completed="ButtonPress" />
+                <Label Text="Enter your idea below:" FontSize="16"  Padding="0,0,0,0" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" Margin="20, 60, 0, 20">
+                    <Entry Placeholder="Fortune" 
+                           BackgroundColor="{StaticResource Accent}" 
+                           HorizontalOptions="Center"
+                           MinimumWidthRequest="100"
+                           WidthRequest="300"
+                           Text="{Binding Text}" 
+                           Completed="ButtonPress" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

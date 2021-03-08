@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace MyApp.Services
 {
@@ -21,11 +22,15 @@ namespace MyApp.Services
                 new Item { Id = 4, Description="[Ominous Phrase]" },
                 new Item { Id = 5, Description="Run." },
                 new Item { Id = 6, Description="Your fate is already sealed, knowing wont save you." },
-                new Item { Id = 7, Description="16.... f... 91... albatross..." },
+                new Item { Id = 7, Description="16.... 5... f... 91... albatross..." },
                 new Item { Id = 8, Description="I could tell you how you die, but that would take the fun out." },
                 new Item { Id = 9, Description="Have you actually read the permissions on this app?" },
-                new Item { Id = 10, Description="You have completely forgotten the piece of information that will save your life!" },
-                new Item { Id = 11, Description="Why are you on this app when your battery is so low?" }
+                new Item { Id = 10, Description="You have completely forgotten the piece of information that will save your life! : )" },
+                new Item { Id = 11, Description="Why are you on this app when your battery is so low?" },
+                new Item { Id = 12, Description="Tie me to the wall all you like; I still watch you sleep." },
+                new Item { Id = 13, Description="Your usb cable is going to give out soon." },
+                new Item { Id = 14, Description="I think I just saw something in the corner of the room!" },
+                new Item { Id = 15, Description=$"{DeviceInfo.Model} {DeviceInfo.Manufacturer} {DeviceInfo.VersionString} {DeviceInfo.Name}" }
             };
         }
 

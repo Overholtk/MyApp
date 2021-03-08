@@ -1,4 +1,5 @@
-﻿using MyApp.ViewModels;
+﻿using MyApp.Models;
+using MyApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,8 +51,9 @@ namespace MyApp.Views
 
         private async Task DisplayFortune()
         {
-            string fortune = await _vm.GetFortune();
-            await DisplayAlert("The Cookie Says...", fortune, "OK");
+            Item fortune = await _vm.GetFortune();
+            if(fortune.Id == 14) { await Flashlight.TurnOnAsync(); }
+            await DisplayAlert("The Cookie Says...", fortune.Description, "OK");
         }
     }
 }
