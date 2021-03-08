@@ -14,12 +14,18 @@ namespace MyApp.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                //Fortunes 1-10: random ominousness
+                new Item { Id = 1, Description="Get your hands on the nude lip kit, it leaves no mark at all upon the soul." },
+                new Item { Id = 2, Description="Tap OK once to remember, twice to forget." },
+                new Item { Id = 3, Description="Did you notice the change in your sock drawer?" },
+                new Item { Id = 4, Description="[Ominous Phrase]" },
+                new Item { Id = 5, Description="Run." },
+                new Item { Id = 6, Description="Your fate is already sealed, knowing wont save you." },
+                new Item { Id = 7, Description="16.... f... 91... albatross..." },
+                new Item { Id = 8, Description="I could tell you how you die, but that would take the fun out." },
+                new Item { Id = 9, Description="Have you actually read the permissions on this app?" },
+                new Item { Id = 10, Description="You have completely forgotten the piece of information that will save your life!" },
+                new Item { Id = 11, Description="Why are you on this app when your battery is so low?" }
             };
         }
 
@@ -39,7 +45,7 @@ namespace MyApp.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeleteItemAsync(int id)
         {
             var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
@@ -47,7 +53,7 @@ namespace MyApp.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<Item> GetItemAsync(int id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }

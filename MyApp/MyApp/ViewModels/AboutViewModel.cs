@@ -40,7 +40,7 @@ namespace MyApp.ViewModels
         {
             Item newItem = new Item()
             {
-                Text = Text
+                Description = Text
             };
 
             await DataStore.AddItemAsync(newItem);
