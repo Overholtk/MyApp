@@ -17,10 +17,13 @@ After setting up your device, click the "run" button in your IDE to run the app 
 ## Visuals:
 
 Application Start:
+
 ![Image 1](https://github.com/Overholtk/MyApp/blob/master/MyApp/Assets/1.PNG)
 
 Using the application:
+
 ![Image 2](https://github.com/Overholtk/MyApp/blob/master/MyApp/Assets/2.PNG)
 
 Application End:
+
 ![Image 3](https://github.com/Overholtk/MyApp/blob/master/MyApp/Assets/3.PNG)
